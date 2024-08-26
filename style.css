@@ -1,7 +1,6 @@
-
 /*  Unviversal styles*/
 
-:root{
+:root {
     --primary-color: hsl(180, 94%, 21%);
     --secondary-color: hsl(100, 94%, 21%);
     --fav-blue-black: hsl(207, 85%, 3%);
@@ -14,26 +13,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background: var(--primary-color);
 }
 
 .start-button,
-.info-container{
+.info-container,
+.quiz-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.start-button button{
+.start-button button {
     font-size: 40px;
     font-weight: 900;
     padding: 20px 50px;
@@ -45,7 +45,7 @@ body{
     color: var(--fav-white);
 }
 
-.info-container{
+.info-container {
     display: none;
     width: 540px;
     background: var(--fav-white);
@@ -53,7 +53,7 @@ body{
 }
 
 
-.info-container .container-title{
+.info-container .container-title {
     height: 60px;
     width: 100%;
     border-bottom: 2px solid var(--primary-color);
@@ -65,21 +65,21 @@ body{
 
 }
 
-.info-container .rule-list{
+.info-container .rule-list {
     padding: 15px 35px;
 }
 
-.info-container .rule-list .rule{
+.info-container .rule-list .rule {
     margin: 10px 0;
     font-size: 20px;
 }
 
-.info-container .rule-list .rule span{
+.info-container .rule-list .rule span {
     font-weight: 600;
     color: var(--fav-blue-black);
 }
 
-.info-container .nav-buttons{
+.info-container .nav-buttons {
     height: 60px;
     display: flex;
     align-items: center;
@@ -88,7 +88,7 @@ body{
     border-top: 2px solid var(--primary-color);
 }
 
-.info-container .nav-buttons button{
+.info-container .nav-buttons button {
     margin: 0 5px;
     height: 40px;
     width: 100px;
@@ -102,22 +102,77 @@ body{
     transition: all 0.4s ease;
 }
 
-.nav-buttons button.quit-quiz{
+.nav-buttons button.quit-quiz {
     color: var(--primary-color);
     background: var(--fav-white);
 }
 
-.nav-buttons button.quit-quiz:hover{
+.nav-buttons button.quit-quiz:hover {
     color: var(--fav-white);
     background: var(--primary-color);
 }
 
-.nav-buttons button.continue{
+.nav-buttons button.continue {
     color: var(--fav-white);
     background-color: var(--primary-color);
 }
 
-.nav-buttons button.continue:hover{
+.nav-buttons button.continue:hover {
     color: var(--primary-color);
     background: var(--fav-white);
+}
+
+.quiz-container {
+    width: 50px;
+    background: var(--fav-white);
+    border-radius: 5px;
+}
+
+.quiz-container header {
+    height: 70px;
+    padding: 0 30px;
+    background: var(--fav-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+
+}
+
+.quiz-container .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz-container header .title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.quiz-container header .time-text {
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quiz-container header .timer-sec {
+    font-size: 18px;
+    font-weight: 500;
+    background: var(--dark-gray);
+    height: 30px;
+    width: 45px;
+    color: var(--fav-white);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray);
+    user-select: none;
 }
