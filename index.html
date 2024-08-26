@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizzapp | Quiz Application</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <script src="https://kit.fontawesome.com/21b2c7c7d4.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body><div class="welcome-text">You are welcome to the Winner's Quiz Application - <span> Quizzapp</span> 
+    <p>Click on the button whe you are ready to kickstart</p>
+</div>
     <!-- Go Button -->
     <div class="start-button">
-        <button>Go!</button>
+        <button>Start!</button>
     </div>
 
     <div class="info-container">
@@ -42,7 +45,7 @@
                 Winner's Quiz Application
             </div>
             <div class="timer">
-                <div class="time-text">Time Remaining</div>
+                <div class="time-text">Time Left</div>
                 <div class="timer-sec">15</div>
             </div>
         </header>
@@ -82,6 +85,13 @@
             <button class="next-btn">Next Question</button>
         </footer>
     </div>
+
+    <!-- Result Container -->
+     <div class="result-container">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+     </div>
 </body>
 
 </html>

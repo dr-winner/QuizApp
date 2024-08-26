@@ -24,6 +24,28 @@ body {
     background: var(--primary-color);
 }
 
+.welcome-text{
+    font-size: 30px;
+    font-weight: 700;
+    color: hsl(180, 94%, 50%);
+    text-align: center;
+    margin-top: 10%;
+    user-select: none;
+}
+
+.welcome-text span {
+    font-weight: 900;
+    color: rgb(12, 246, 67);
+}
+
+.welcome-text p {
+    color: hsl(180, 94%, 90%);
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 5%;
+    color: rgb(12, 246, 67);
+}
+
 .start-button,
 .info-container,
 .quiz-container {
@@ -38,9 +60,9 @@ body {
     font-weight: 900;
     padding: 20px 50px;
     outline: none;
-    border: 4px solid var(--fav-white);
-    border-radius: 10px;
-    background: var(--secondary-color);
+    border: 4px solid var(--fav-blue-black);
+    border-radius: 20px;
+    background: hsl(180, 94%, 35%);
     cursor: pointer;
     color: var(--fav-white);
 }
@@ -123,13 +145,16 @@ body {
 }
 
 .quiz-container {
+    display: none;
     width: 550px;
     background: var(--fav-white);
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 .quiz-container header {
-    height: 70px;
+    position: sticky;
+    z-index: 99;
+    height: 60px;
     padding: 0 30px;
     background: var(--fav-white);
     display: flex;
@@ -141,38 +166,144 @@ body {
 }
 
 .quiz-container header .title {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 900;
 }
 
 .quiz-container header .timer {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    width: 145px;
+    width: 140px;
     height: 45px;
-    background: var(--secondary-color);
+    background: hsl(180, 94%, 28%);
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     padding: 0 8px;
 }
 
-.quiz-container header .time-text {
-    font-weight: 400;
+.quiz-container header .timer .time-text {
+    font-weight: 700;
     font-size: 17px;
     user-select: none;
 }
 
-.quiz-container header .timer-sec {
-    font-size: 18px;
-    font-weight: 500;
+.quiz-container header .timer .timer-sec {
+    font-size: 17px;
+    font-weight: 700;
     background: var(--dark-gray);
     height: 30px;
-    width: 45px;
+    width: 40px;
     color: var(--fav-white);
     text-align: center;
     line-height: 30px;
-    border-radius: 5px;
+    border-radius: 4px;
     border: 1px solid var(--light-gray);
     user-select: none;
+}
+
+.quiz-container section{
+    padding: 25px 30px 20px 30px;
+    background: var(--fav-white);
+}
+
+.quiz-container section .question-text{
+    font-size: 30px;
+    font-weight: 700;
+    user-select: none;
+}
+
+.quiz-container section .answer-list{
+    padding: 20px 0;
+    display: block;
+}
+
+section .answer-list .option {
+    background: hsl(208, 100%, 97%);
+    border: 2px solid hsl(208, 98%, 76%);
+    border-radius: 7px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+section .answer-list .option:hover{
+    color: hsl(211, 100%, 26%);
+    background: hsl(211, 77%, 80%);
+    border-color: hsl(211, 100%, 86%);
+}
+
+.answer-list .option:last-child{
+    margin-bottom: 0;
+}
+
+.answer-list .option .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 30%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 24px;
+    pointer-events: none;
+}
+
+.answer-list .option .icon.tick{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: hsl(134, 41%, 88%);
+}
+
+.answer-list .option .icon.cross{
+    color: hsl(354, 88%, 26%);
+    border-color: hsl(354, 88%, 26%);
+    background: hsl(354, 68%, 66%);
+}
+
+.quiz-container footer{
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz-container footer .question-stat span{
+    display: flex;
+    user-select: none;
+}
+
+footer .question-stat span p{
+    font-weight: 700;
+    padding: 0 5px;
+}
+
+.question-stat span p:first-child{
+    padding-left: 0px;
+}
+
+footer .next-btn{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    color: var(--fav-white);
+    background: var(--primary-color);
+    border-radius: 8px;
+    border: 2px solid hsl(211, 93%, 12%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer .next-btn:hover{
+    background: hsl(180, 94%, 28%);
+    border-color: var(--fav-blue-black);
 }
