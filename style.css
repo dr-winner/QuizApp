@@ -1,5 +1,5 @@
 
-/*  */
+/*  Unviversal styles*/
 
 :root{
     --primary-color: hsl(180, 94%, 21%);
@@ -30,66 +30,94 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
 }
 
 .start-button button{
-    font-size: 25px;
+    font-size: 40px;
     font-weight: 900;
-    padding: 30px 50px;
+    padding: 20px 50px;
     outline: none;
-    border: none;
+    border: 4px solid var(--fav-white);
     border-radius: 10px;
-    background: hsl(176, 96%, 10%);
+    background: var(--secondary-color);
     cursor: pointer;
+    color: var(--fav-white);
 }
 
 .info-container{
-    width: 550px;
+    display: none;
+    width: 540px;
     background: var(--fav-white);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 
 .info-container .container-title{
     height: 60px;
     width: 100%;
-    border-bottom: 2px solid hsl(120, 100%, 25%);
+    border-bottom: 2px solid var(--primary-color);
     display: flex;
     align-items: center;
     padding: 0 35px;
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 500;
 
 }
 
 .info-container .rule-list{
-    padding: 20px 40px;
+    padding: 15px 35px;
 }
 
 .info-container .rule-list .rule{
-    margin: 10px;
+    margin: 10px 0;
     font-size: 20px;
 }
 
 .info-container .rule-list .rule span{
-    font-weight: 700;
-    color: hsl(176, 96%, 10%);
+    font-weight: 600;
+    color: var(--fav-blue-black);
 }
 
-.info-container .nav-button{
+.info-container .nav-buttons{
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 35px;
-    border-top: 2px solid hsl(120, 100%, 25%;
+    padding: 10px 40px;
+    border-top: 2px solid var(--primary-color);
 }
 
-.info-container .nav-button button{
-    margin: 0 10px;
+.info-container .nav-buttons button{
+    margin: 0 5px;
     height: 40px;
     width: 100px;
-    border: 2px ;
-    
+    border: 2px solid var(--secondary-color);
+    background: var(--primary-color);
+    border-radius: 5px;
+    color: var(--fav-white);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.nav-buttons button.quit-quiz{
+    color: var(--primary-color);
+    background: var(--fav-white);
+}
+
+.nav-buttons button.quit-quiz:hover{
+    color: var(--fav-white);
+    background: var(--primary-color);
+}
+
+.nav-buttons button.continue{
+    color: var(--fav-white);
+    background-color: var(--primary-color);
+}
+
+.nav-buttons button.continue:hover{
+    color: var(--primary-color);
+    background: var(--fav-white);
 }
