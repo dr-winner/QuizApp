@@ -123,7 +123,7 @@ body {
 }
 
 .quiz-container {
-    width: 540px;
+    width: 50px;
     background: var(--fav-white);
     border-radius: 5px;
 }
@@ -136,7 +136,7 @@ body {
     align-items: center;
     justify-content: space-between;
     border-radius: 5px 5px 0 0;
-    box-shadow: 8px 3px 5px 1px var(--light-gray);
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -159,11 +159,11 @@ body {
 
 .quiz-container header .time-text {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 17px;
     user-select: none;
 }
 
-.quiz-container header .time-sec {
+.quiz-container header .timer-sec {
     font-size: 18px;
     font-weight: 500;
     background: var(--dark-gray);
