@@ -135,4 +135,44 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 8px 3px 5px 1px var(--light-gray);
+
+}
+
+.quiz-container .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz-container header .title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.quiz-container header .time-text {
+    font-weight: 400;
+    font-size: 12px;
+    user-select: none;
+}
+
+.quiz-container header .time-sec {
+    font-size: 18px;
+    font-weight: 500;
+    background: var(--dark-gray);
+    height: 30px;
+    width: 45px;
+    color: var(--fav-white);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray);
+    user-select: none;
 }
