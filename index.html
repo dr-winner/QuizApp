@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizzapp | Quiz Application</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <script src="https://kit.fontawesome.com/21b2c7c7d4.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body><div class="welcome-text">You are welcome to the Winner's Quiz Application - <span> Quizzapp</span> 
+    <p>Click on the button when you are ready</p>
+</div>
     <!-- Go Button -->
     <div class="start-button">
-        <button>Go!</button>
+        <button>Start!</button>
     </div>
 
     <div class="info-container">
@@ -42,7 +45,7 @@
                 Winner's Quiz Application
             </div>
             <div class="timer">
-                <div class="time-text">Time Remaining</div>
+                <div class="time-text">Time Left</div>
                 <div class="timer-sec">15</div>
             </div>
         </header>
@@ -53,19 +56,19 @@
 
             <div class="answer-list">
                 <div class="option">
-                    <span>a) Central Processing Unit</span>
+                    <span>Central Processing Unit</span>
                     <div class="icon tick"><i class="fas fa-check"></i></div>
                 </div>
                 <div class="option">
-                    <span> b) Computer Personal Unit</span>
+                    <span> Computer Personal Unit</span>
                     <div class="icon cross"><i class="fas fa-times"></i></div>
                 </div>
                 <div class="option">
-                    <span> c) Central Processor Unit</span>
+                    <span> Central Processor Unit</span>
                     <!-- <div class="icon cross"><i class="fas fa-check"></i></div> -->
                 </div>
                 <div class="option">
-                    <span> d) Central Peripheral Unit</span>
+                    <span> Central Peripheral Unit</span>
                     <!-- <div class="icon cross"><i class="fas fa-check"></i></div> -->
                 </div>
 
@@ -82,6 +85,22 @@
             <button class="next-btn">Next Question</button>
         </footer>
     </div>
+
+    <!-- Result Container -->
+     <div class="result-container">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete-notice">You have successfully completed this quiz</div>
+        <div class="score-text">
+            <span>and sorry, you got <p>2</p> out of <p>5</p></span>
+         </div>
+         <div class="nav-buttons">
+            <button class="continue">Re-take Quiz</button>
+            <button class="quit-quiz">Quit Quiz</button>
+    
+         </div>
+     </div>
 </body>
 
 </html>
