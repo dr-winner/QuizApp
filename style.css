@@ -31,6 +31,8 @@ body {
     text-align: center;
     margin-top: 10%;
     user-select: none;
+    /* position: absolute; */
+    align-item: center;
 }
 
 .welcomeText span {
@@ -40,9 +42,9 @@ body {
 
 .welcomeText p {
     color: hsl(180, 94%, 90%);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
-    margin-top: 5%;
+    margin-top: 2%;
     color: rgb(12, 246, 67);
 }
 
@@ -56,32 +58,36 @@ body {
     transform: translate(-50%, -50%);
     /* box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), */
     /* 0px 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    transition: all 0.3s ease;
 }
 
-.infoContainer.activeInfo {
+.infoContainer.activeInfo,
+.quizContainer.activeQuiz,
+.welcomeText.activeWelcome {
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1)
 }
 
-.welcomeText.activeInfo {
-    z-index: 5;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1)
-}
 
 .startButton button {
     font-size: 40px;
     font-weight: 900;
     padding: 20px 50px;
     outline: none;
-    border: 4px solid var(--fav-blue-black);
-    border-radius: 20px;
+    border: 4px solid var(--fav-white);
+    border-radius: 10%;
     background: hsl(180, 94%, 35%);
     cursor: pointer;
     color: var(--fav-white);
+    transition: all 0.5s ease-in-out
+}
+
+.startButton button:hover {
+    color: var(--primary-color);
+    background: var(--light-gray);
+    border-color: var(--light-gray);
 }
 
 .infoContainer {
@@ -138,6 +144,7 @@ body {
     border: 2px solid var(--secondary-color);
     background: var(--primary-color);
     border-radius: 5px;
+    outline: none;
     color: var(--fav-white);
     font-size: 20px;
     font-weight: 500;
@@ -387,7 +394,4 @@ footer .nextBtn:hover {
     border: 1px solid var(--primary-color);
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-transition: all 0.3s ease;
 }
