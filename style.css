@@ -24,53 +24,73 @@ body {
     background: var(--primary-color);
 }
 
-.welcome-text{
+.welcomeText {
     font-size: 30px;
     font-weight: 700;
     color: hsl(180, 94%, 50%);
     text-align: center;
     margin-top: 10%;
     user-select: none;
+    /* position: absolute; */
+    align-item: center;
 }
 
-.welcome-text span {
+.welcomeText span {
     font-weight: 900;
     color: rgb(12, 246, 67);
 }
 
-.welcome-text p {
+.welcomeText p {
     color: hsl(180, 94%, 90%);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
-    margin-top: 5%;
+    margin-top: 2%;
     color: rgb(12, 246, 67);
 }
 
-.start-button,
-.info-container,
-.quiz-container,
-.result-container {
+.startButton,
+.infoContainer,
+.quizContainer,
+.resultContainer {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), */
-                /* 0px 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    /* 0px 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    transition: all 0.3s ease;
 }
 
-.start-button button {
+.infoContainer.activeInfo,
+.quizContainer.activeQuiz,
+.welcomeText.activeWelcome {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1)
+}
+
+
+.startButton button {
     font-size: 40px;
     font-weight: 900;
     padding: 20px 50px;
     outline: none;
-    border: 4px solid var(--fav-blue-black);
-    border-radius: 20px;
+    border: 4px solid var(--fav-white);
+    border-radius: 10%;
     background: hsl(180, 94%, 35%);
     cursor: pointer;
     color: var(--fav-white);
+    transition: all 0.5s ease-in-out
 }
 
-.info-container {
+.startButton button:hover {
+    color: var(--primary-color);
+    background: var(--light-gray);
+    border-color: var(--light-gray);
+}
+
+.infoContainer {
     opacity: 0;
     pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
@@ -80,7 +100,7 @@ body {
 }
 
 
-.info-container .container-title {
+.infoContainer .containerTitle {
     height: 60px;
     width: 100%;
     border-bottom: 2px solid var(--primary-color);
@@ -91,24 +111,24 @@ body {
     font-weight: 700;
 }
 
-.info-container .rule-list {
+.infoContainer .ruleList {
     padding: 15px 35px;
     line-height: 30px;
     font-size: 15px;
     font-weight: 700;
 }
 
-.info-container .rule-list .rule {
+.infoContainer .ruleList .rule {
     margin: 10px 0;
     font-size: 20px;
 }
 
-.info-container .rule-list .rule span {
+.infoContainer .ruleList .rule span {
     font-weight: 600;
     color: var(--primary-color);
 }
 
-.info-container .nav-buttons {
+.infoContainer .navButtons {
     height: 60px;
     display: flex;
     align-items: center;
@@ -117,13 +137,14 @@ body {
     border-top: 2px solid var(--primary-color);
 }
 
-.info-container .nav-buttons button {
+.infoContainer .navButtons button {
     margin: 0 5px;
     height: 40px;
     width: 100px;
     border: 2px solid var(--secondary-color);
     background: var(--primary-color);
     border-radius: 5px;
+    outline: none;
     color: var(--fav-white);
     font-size: 20px;
     font-weight: 500;
@@ -131,28 +152,28 @@ body {
     transition: all 0.4s ease;
 }
 
-.nav-buttons button.quit-quiz {
+.navButtons button.quitQuiz {
     color: var(--primary-color);
     background: var(--fav-white);
 }
 
-.nav-buttons button.quit-quiz:hover {
+.navButtons button.quitQuiz:hover {
     color: var(--fav-white);
     background: var(--primary-color);
 }
 
-.nav-buttons button.continue {
+.navButtons button.continueButton {
     color: var(--fav-white);
     background-color: var(--primary-color);
 }
 
-.nav-buttons button.continue:hover {
+.navButtons button.continueButton:hover {
     color: var(--primary-color);
     background: var(--fav-white);
 }
 
-.quiz-container {
-    /* opacity: 0;*/
+.quizContainer {
+    opacity: 0;
     pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
     width: 550px;
@@ -160,7 +181,7 @@ body {
     border-radius: 7px;
 }
 
-.quiz-container header {
+.quizContainer header {
     position: sticky;
     z-index: 99;
     height: 60px;
@@ -174,12 +195,12 @@ body {
 
 }
 
-.quiz-container header .title {
+.quizContainer header .title {
     font-size: 18px;
     font-weight: 900;
 }
 
-.quiz-container header .timer {
+.quizContainer header .timer {
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -191,13 +212,13 @@ body {
     padding: 0 8px;
 }
 
-.quiz-container header .timer .time-text {
+.quizContainer header .timer .timeText {
     font-weight: 700;
     font-size: 17px;
     user-select: none;
 }
 
-.quiz-container header .timer .timer-sec {
+.quizContainer header .timer .timerSec {
     font-size: 17px;
     font-weight: 700;
     background: var(--dark-gray);
@@ -211,23 +232,23 @@ body {
     user-select: none;
 }
 
-.quiz-container section{
+.quizContainer section {
     padding: 25px 30px 20px 30px;
     background: var(--fav-white);
 }
 
-.quiz-container section .question-text{
+.quizContainer section .questionText {
     font-size: 30px;
     font-weight: 700;
     user-select: none;
 }
 
-.quiz-container section .answer-list{
+.quizContainer section .answerList {
     padding: 20px 0;
     display: block;
 }
 
-section .answer-list .option {
+section .answerList .option {
     background: hsl(208, 100%, 97%);
     border: 2px solid hsl(208, 98%, 76%);
     border-radius: 7px;
@@ -241,17 +262,18 @@ section .answer-list .option {
     transition: all 0.3s ease;
 }
 
-section .answer-list .option:hover{
+section .answerList .option:hover {
     color: hsl(211, 100%, 26%);
     background: hsl(211, 77%, 80%);
     border-color: hsl(211, 100%, 86%);
+
 }
 
-.answer-list .option:last-child{
+.answerList .option:last-child {
     margin-bottom: 0;
 }
 
-.answer-list .option .icon{
+.answerList .option .icon {
     height: 26px;
     width: 26px;
     border: 2px solid transparent;
@@ -262,19 +284,19 @@ section .answer-list .option:hover{
     pointer-events: none;
 }
 
-.answer-list .option .icon.tick{
+.answerList .option .icon.tick {
     color: var(--primary-color);
     border-color: var(--primary-color);
     background: hsl(134, 41%, 88%);
 }
 
-.answer-list .option .icon.cross{
+.answerList .option .icon.cross {
     color: hsl(354, 88%, 26%);
     border-color: hsl(354, 88%, 26%);
     background: hsl(354, 68%, 66%);
 }
 
-.quiz-container footer{
+.quizContainer footer {
     height: 60px;
     width: 100%;
     padding: 0 30px;
@@ -283,21 +305,21 @@ section .answer-list .option:hover{
     justify-content: space-between;
 }
 
-.quiz-container footer .question-stat span{
+.quizContainer footer .questionStat span {
     display: flex;
     user-select: none;
 }
 
-footer .question-stat span p{
+footer .questionStat span p {
     font-weight: 700;
     padding: 0 5px;
 }
 
-.question-stat span p:first-child{
+.questionStat span p:first-child {
     padding-left: 0px;
 }
 
-footer .next-btn{
+footer .nextBtn {
     height: 40px;
     padding: 0 13px;
     font-size: 18px;
@@ -312,12 +334,12 @@ footer .next-btn{
     transition: all 0.3s ease;
 }
 
-footer .next-btn:hover{
+footer .nextBtn:hover {
     background: hsl(180, 94%, 28%);
     border-color: var(--fav-blue-black);
 }
 
-.result-container{
+.resultContainer {
     background: var(--fav-white);
     width: 450px;
     padding: 25px 30px;
@@ -332,35 +354,35 @@ footer .next-btn:hover{
     transform: translate(-50%, -50%) scale(0.9);
 }
 
-.result-container .icon{
+.resultContainer .icon {
     font-size: 100px;
     color: var(--primary-color);
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
 }
 
-.result-container .complete-notice {
+.resultContainer .completeNotice {
     font-size: 20px;
-    font-weight: 700;    
+    font-weight: 700;
 }
 
-.result-container .score-text span{
+.resultContainer .scoreText span {
     display: flex;
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
 }
 
-.score-text span{
+.scoreText span p {
     font-weight: 600;
     padding: 0 4px;
 }
 
-.result-container .nav-buttons{
+.resultContainer .navButtons {
     display: flex;
     margin: 20px 0;
 }
 
-.result-container .nav-buttons button{
+.resultContainer .navButtons button {
     margin: 0 10px;
     height: 45px;
     padding: 0 20px;
