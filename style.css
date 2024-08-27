@@ -48,11 +48,14 @@ body {
 
 .start-button,
 .info-container,
-.quiz-container {
+.quiz-container,
+.result-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), */
+                /* 0px 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .start-button button {
@@ -68,7 +71,9 @@ body {
 }
 
 .info-container {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
     width: 540px;
     background: var(--fav-white);
     border-radius: 5px;
@@ -81,14 +86,16 @@ body {
     border-bottom: 2px solid var(--primary-color);
     display: flex;
     align-items: center;
-    padding: 0 35px;
-    font-size: 20px;
-    font-weight: 500;
-
+    padding: 0 75px;
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .info-container .rule-list {
     padding: 15px 35px;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .info-container .rule-list .rule {
@@ -98,7 +105,7 @@ body {
 
 .info-container .rule-list .rule span {
     font-weight: 600;
-    color: var(--fav-blue-black);
+    color: var(--primary-color);
 }
 
 .info-container .nav-buttons {
@@ -145,7 +152,9 @@ body {
 }
 
 .quiz-container {
-    display: none;
+    /* opacity: 0;*/
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
     width: 550px;
     background: var(--fav-white);
     border-radius: 7px;
@@ -306,4 +315,61 @@ footer .next-btn{
 footer .next-btn:hover{
     background: hsl(180, 94%, 28%);
     border-color: var(--fav-blue-black);
+}
+
+.result-container{
+    background: var(--fav-white);
+    width: 450px;
+    padding: 25px 30px;
+    border-radius: 7px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.result-container .icon{
+    font-size: 100px;
+    color: var(--primary-color);
+    margin-bottom: 10px;    
+}
+
+.result-container .complete-notice {
+    font-size: 20px;
+    font-weight: 700;    
+}
+
+.result-container .score-text span{
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.score-text span{
+    font-weight: 600;
+    padding: 0 4px;
+}
+
+.result-container .nav-buttons{
+    display: flex;
+    margin: 20px 0;
+}
+
+.result-container .nav-buttons button{
+    margin: 0 10px;
+    height: 45px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 7px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
