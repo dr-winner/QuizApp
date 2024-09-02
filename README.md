@@ -35,6 +35,8 @@ Are you ready to test your IT knowledge? QuizzApp is a fun and engaging quiz des
 The questions here
 Here are 50 basic IT questions with 4 options each, one being the correct answer. I'll provide the questions first, and if you'd like the answers, please let me know.
 
+
+am creating a quiz app with these questions
 1. What does CPU stand for?
    **a) Central Processing Unit**
    b) Computer Personal Unit

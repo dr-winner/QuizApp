@@ -22,4 +22,63 @@ quitQuiz.onclick = () => {
 continueButton.onclick = () => {
     infoContainer.classList.remove("activeInfo"); //hide the info container
     quizContainer.classList.add("activeQuiz"); //show the quiz container
+    showQuestions(0);
+    questionStatus(1);
+}
+
+let questionCount = 0;
+let quesNumb = 1;
+
+const nextButton = quizContainer.querySelector(".nextBtn");
+
+// Next button click
+
+nextButton.onclick = () =>{
+    if(questionCount < questions.length - 1){
+        questionCount++;
+        quesNumb++
+        showQuestions(questionCount);
+        questionStatus(quesNumb)
+    } else{
+        console.log("Test completed!");
+    }
+    
+}
+
+function showQuestions(index){
+    const questionTxt = document.querySelector(".questionText");
+    const ans_list = document.querySelector(".answerList");
+    let questionTag = '<span>' + questions[index].QuestionNumber+ ". " + questions[index].question + '</span>';
+    let optionTag = '<div class="option">' + questions[index].optionlist[0] + '<span></span></div>'
+                    + '<div class="option">' + questions[index].optionlist[1] + '<span></span></div>'
+                    + '<div class="option">' + questions[index].optionlist[2] + '<span></span></div>'
+                    + '<div class="option">' + questions[index].optionlist[3] + '<span></span></div>';
+    questionTxt.innerHTML = questionTag;
+    ans_list.innerHTML = optionTag;
+
+    const option = ans_list.querySelectorAll(".option");
+    for(let i = 0; i < option.length; i++){
+        option[i].setAttribute("onclick", "optionSelected(this)")
+    }
+}
+
+function optionSelected(answer){
+    let userAnswer = answer.textContent;
+    let correctAnswer = questions[questionCount].answer;
+    if(userAnswer == correctAnswer){
+        answer.classList.add("correct");
+        console.log("Answer is correct");
+    } else{
+        answer.classList.add("incorrect");
+        console.log("Answer is incorrect");        
+    }
+}
+
+
+
+
+function questionStatus(index){
+    const bottomQuestionCounter = quizContainer.querySelector(".questionStat");
+    let totalQuestionsCountTag = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Questions</span>';
+    bottomQuestionCounter.innerHTML = totalQuestionsCountTag;
 }
