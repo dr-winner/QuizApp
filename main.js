@@ -7,6 +7,8 @@ const quitQuiz = infoContainer.querySelector(".navButtons .quitQuiz");
 const continueButton = infoContainer.querySelector(".navButtons .continueButton");
 const quizContainer = document.querySelector(".quizContainer");
 
+const ans_list = document.querySelector(".answerList");
+
 // If the start button is clicked
 startButton.onclick = () => {
     infoContainer.classList.add("activeInfo"); //show the info container
@@ -45,6 +47,7 @@ nextButton.onclick = () =>{
     
 }
 
+// Getting the questions and answers from the array
 function showQuestions(index){
     const questionTxt = document.querySelector(".questionText");
     const ans_list = document.querySelector(".answerList");
@@ -65,12 +68,25 @@ function showQuestions(index){
 function optionSelected(answer){
     let userAnswer = answer.textContent;
     let correctAnswer = questions[questionCount].answer;
+    let allOptions = ans_list.children.length;
     if(userAnswer == correctAnswer){
         answer.classList.add("correct");
         console.log("Answer is correct");
     } else{
         answer.classList.add("incorrect");
-        console.log("Answer is incorrect");        
+        console.log("Answer is incorrect");      
+        
+        // once user selects the wrong answer, auto select the correct answer
+        for(let i = 0; i < allOptions; i++){
+            if( ans_list.children[i].textContent == correctAnswer){
+                ans_list.children[i].setAttribute("class", "option correct");
+            }            
+        }
+    }
+
+    // once the user selects one answer, disable all options
+    for(let i = 0; i < allOptions; i++){
+        ans_list.children[i].classList.add("disabled");
     }
 }
 

@@ -307,6 +307,10 @@ section .answerList .option:hover {
     background: hsl(354, 100%, 87%);
 }
 
+.answerList .option.disabled{
+    pointer-events: none;
+}
+
 
 .quizContainer footer {
     height: 60px;
