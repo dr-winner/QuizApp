@@ -1,8 +1,8 @@
 ## [QuizzApp](http://duvorrichardwinner.me/QuizApp/): Your IT Challenge
 
-**Welcome to QuizzApp!**
+**Welcome to [QuizzApp](http://duvorrichardwinner.me/QuizApp/)!**
 
-Are you ready to test your IT knowledge? QuizzApp is a fun and engaging quiz designed to challenge your understanding of basic IT concepts.
+Are you ready to test your IT knowledge? [QuizzApp](http://duvorrichardwinner.me/QuizApp/) is a fun and engaging quiz designed to challenge your understanding of basic IT concepts.
 
 **How it works:**
 
@@ -12,7 +12,7 @@ Are you ready to test your IT knowledge? QuizzApp is a fun and engaging quiz des
 
 **What's in it for you?**
 
-* **Learn Something New:** QuizzApp is a great way to learn or reinforce your IT knowledge.
+* **Learn Something New:** [QuizzApp](http://duvorrichardwinner.me/QuizApp/) is a great way to learn or reinforce your IT knowledge.
 * **Have Fun:** The quiz is designed to be enjoyable and challenging at the same time.
 * **Test Your Skills:** See how well you understand basic IT concepts.
 
@@ -28,4 +28,4 @@ Are you ready to test your IT knowledge? QuizzApp is a fun and engaging quiz des
 
 **Note:** To ensure the best experience, please use a modern web browser that supports HTML5, CSS3, and JavaScript.
 
-**Enjoy QuizzApp!**
+**Enjoy [QuizzApp](http://duvorrichardwinner.me/QuizApp/)!**
