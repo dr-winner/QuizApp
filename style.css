@@ -231,6 +231,15 @@ body {
     user-select: none;
 }
 
+.quizContainer header .timerBar{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    /* width: 50%; */
+    background: red;
+    height: 5px;
+}
+
 .quizContainer section {
     padding: 25px 30px 20px 30px;
     background: var(--fav-white);
@@ -336,6 +345,7 @@ footer .questionStat span p {
 }
 
 footer .nextBtn {
+    display: none;
     height: 40px;
     padding: 0 13px;
     font-size: 18px;
