@@ -24,7 +24,8 @@ Are you ready to test your IT knowledge? [QuizzApp](http://duvorrichardwinner.me
 
 **Ready to take the quiz?** Click the "Start!" button to see how well you know your IT!
 
-![Screenshot 2024-09-02 234617](https://github.com/user-attachments/assets/de794c97-fd33-493e-86e9-b556953385da)
+![image](https://github.com/user-attachments/assets/8453cb58-d326-4216-8f46-53d7439e4f45)
+
 
 
 **Note:** To ensure the best experience, please use a modern web browser that supports HTML5, CSS3, and JavaScript.
