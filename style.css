@@ -295,16 +295,16 @@ section .answerList .option:hover {
     background: hsl(354, 68%, 66%);
 }
 
-.answerList .option.corect{
+.answerList .option.correct{
     color: var(--primary-color);
-    border-color: var(--primary-color);
+    /* border-color: var(--primary-color); */
     background: hsl(134, 41%, 88%);
 }
 
-.answerList .option.incorect{
+.answerList .option.incorrect{
     color: hsl(354, 88%, 26%);
-    border-color: hsl(354, 88%, 26%);
-    background: hsl(354, 68%, 66%);
+    /* border-color: hsl(354, 88%, 26%); */
+    background: hsl(354, 100%, 87%);
 }
 
 
