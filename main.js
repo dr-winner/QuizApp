@@ -39,6 +39,7 @@ let timeValue = 15;
 let widthValue = 0;
 const nextButton = quizContainer.querySelector(".nextBtn");
 const resultContainer = document.querySelector(".resultContainer");
+const restartQuiz = quizContainer.querySelector(".resultContainer");
 
 // Next button click
 
