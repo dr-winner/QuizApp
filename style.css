@@ -62,7 +62,8 @@ body {
 
 .infoContainer.activeInfo,
 .quizContainer.activeQuiz,
-.welcomeText.activeWelcome {
+.welcomeText.activeWelcome,
+.resultContainer.activeResult {
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
