@@ -38,6 +38,7 @@ let counter;
 let timeValue = 15;
 let widthValue = 0;
 const nextButton = quizContainer.querySelector(".nextBtn");
+const resultContainer = document.query
 
 // Next button click
 
@@ -55,7 +56,7 @@ nextButton.onclick = () =>{
     } else{
         console.log("Test completed");
     }
-    
+
 }
 
 // Getting the questions and answers from the array
@@ -91,15 +92,15 @@ function optionSelected(answer){
         answer.insertAdjacentHTML("beforeend", tickIcon);
     } else{
         answer.classList.add("incorrect");
-        console.log("Answer is incorrect"); 
-        answer.insertAdjacentHTML("beforeend", crossIcon);     
-        
+        console.log("Answer is incorrect");
+        answer.insertAdjacentHTML("beforeend", crossIcon);
+
         // once user selects the wrong answer, auto select the correct answer
         for(let i = 0; i < allOptions; i++){
             if( ans_list.children[i].textContent == correctAnswer){
                 ans_list.children[i].setAttribute("class", "option correct");
                 ans_list.children[i].insertAdjacentHTML("beforeend", tickIcon);
-            }            
+            }
         }
     }
 
@@ -122,7 +123,7 @@ function startTimer(time){
         if(time < 0){
             clearInterval(counter);
             timeCounter.textContent = "00";
-        }        
+        }
     }
 }
 
@@ -131,9 +132,9 @@ function startTimerLine(time){
     function timer(){
         time += 1;
         timerBar.style.width = time + "px";
-        if(time > 549){            
+        if(time > 549){
             clearInterval(counterLine);
-        }        
+        }
     }
 }
 
