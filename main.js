@@ -124,6 +124,7 @@ showResultContainer(){
     const scoreText = resultContainer.querySelector(".scoreText");
     if(userScore < 40){
         let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>50</p></span>';
+        scoreText.innerHTML = scoreTag;
     }
 };
 
