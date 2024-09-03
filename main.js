@@ -122,8 +122,8 @@ showResultContainer(){
     quizContainer.classList.remove("activeQiuz"); //hide the quiz container
     resultContainer.classList.add("activeResult"); //show the result container
     const scoreText = resultContainer.querySelector(".scoreText");
-    if(userScore > 40){
-        let scoreTag = <span>and sorry, you got <p></p> out of <p>50</p></span>
+    if(userScore < 40){
+        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>50</p></span>';
     }
 };
 
