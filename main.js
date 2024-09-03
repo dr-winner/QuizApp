@@ -40,7 +40,7 @@ let widthValue = 0;
 const nextButton = quizContainer.querySelector(".nextBtn");
 const resultContainer = document.querySelector(".resultContainer");
 const restartQuiz = resultContainer.querySelector(".navButtons .continueButton");
-const quitQuiz = resultContainer.querySelector(".navButtons .continueButton");
+const quitQuiz = resultContainer.querySelector(".navButtons .quitQuiz");
 
 // Next button click
 
@@ -57,6 +57,7 @@ nextButton.onclick = () =>{
         nextButton.style.display = "none";
     } else{
         console.log("Test completed");
+        showResultContainer();
     }
 
 }
