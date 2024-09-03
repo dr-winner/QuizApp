@@ -40,6 +40,7 @@ let widthValue = 0;
 const nextButton = quizContainer.querySelector(".nextBtn");
 const resultContainer = document.querySelector(".resultContainer");
 const restartQuiz = resultContainer.querySelector(".resultContainer .navButtons .continueButton");
+const restartQuiz = resultContainer.querySelector(".resultContainer .navButtons .continueButton");
 
 // Next button click
 
