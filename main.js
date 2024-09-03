@@ -37,6 +37,7 @@ let quesNumb = 1;
 let counter;
 let timeValue = 15;
 let widthValue = 0;
+let userScore = 0;
 const nextButton = quizContainer.querySelector(".nextBtn");
 const resultContainer = document.querySelector(".resultContainer");
 const restartQuiz = resultContainer.querySelector(".navButtons .continueButton");
