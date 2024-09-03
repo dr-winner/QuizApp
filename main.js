@@ -114,7 +114,9 @@ function optionSelected(answer){
     nextButton.style.display = "block";
 }
 
-
+showResultContainer(){
+    
+};
 
 function startTimer(time){
     counter = setInterval(timer, 1000);
