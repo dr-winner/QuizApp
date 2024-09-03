@@ -123,7 +123,7 @@ showResultContainer(){
     resultContainer.classList.add("activeResult"); //show the result container
     const scoreText = resultContainer.querySelector(".scoreText");
     if(userScore < 40){
-        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>50</p></span>';
+        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
 };
