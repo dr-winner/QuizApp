@@ -126,6 +126,18 @@ showResultContainer(){
         let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
+    if(userScore < 40){
+        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag;
+    }
+    if(userScore < 40){
+        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag;
+    }
+    if(userScore < 40){
+        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag;
+    }
 };
 
 function startTimer(time){
