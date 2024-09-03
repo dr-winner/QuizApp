@@ -117,7 +117,7 @@ function optionSelected(answer){
 showResultContainer(){
     infoContainer.classList.remove("activeInfo"); //hide the info container
     quizContainer.classList.remove("activeQiuz"); //hide the quiz container
-    quizContainer.classList.remove("activeQiuz"); //hide the quiz container
+    resultContainer.classList.add("activeResult"); //hide the quiz container
 
 };
 
