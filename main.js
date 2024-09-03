@@ -115,7 +115,9 @@ function optionSelected(answer){
 }
 
 showResultContainer(){
-    resultContainer.classList.add("activeInfo");
+    infoContainer.classList.remove("activeInfo"); //hide the info container
+    quizContainer.classList.remove("activeQiuz"); //hide the quiz container
+ 
 };
 
 function startTimer(time){
