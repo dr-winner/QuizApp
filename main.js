@@ -115,7 +115,7 @@ function optionSelected(answer){
 }
 
 showResultContainer(){
-    
+    resultContainer.classList.add("activeInfo");
 };
 
 function startTimer(time){
