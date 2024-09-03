@@ -122,23 +122,23 @@ showResultContainer(){
     quizContainer.classList.remove("activeQiuz"); //hide the quiz container
     resultContainer.classList.add("activeResult"); //show the result container
     const scoreText = resultContainer.querySelector(".scoreText");
-    if(userScore < 10){
-        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
-        scoreText.innerHTML = scoreTag;
-    }
-    else if(userScore < 20){
-        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
-        scoreText.innerHTML = scoreTag;
-    }
-    else if(userScore < 30){
-        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+    if(userScore <= 50){
+        let scoreTag = '<span>You\'re such a genius!, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
     else if(userScore < 40){
-        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>Nice one, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else if(userScore <= 50){
+    else if(userScore < 30){
+        let scoreTag = '<span>You tried your best, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag;
+    }
+    else if(userScore < 20){
+        let scoreTag = '<span>You can do better! trust me. You got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag;
+    }
+    else if(userScore < 10){
         let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
