@@ -38,7 +38,7 @@ let counter;
 let timeValue = 15;
 let widthValue = 0;
 const nextButton = quizContainer.querySelector(".nextBtn");
-const resultContainer = document.querySelector
+const resultContainer = document.querySelector(".");
 
 // Next button click
 
