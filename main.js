@@ -142,6 +142,10 @@ showResultContainer(){
         let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
+    else(userScore < 10){
+        let scoreTag = '<span>Try again, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag;
+    }
 };
 
 function startTimer(time){
