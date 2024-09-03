@@ -8,6 +8,7 @@ const continueButton = infoContainer.querySelector(".navButtons .continueButton"
 const quizContainer = document.querySelector(".quizContainer");
 const timeCounter = quizContainer.querySelector(".timer .timerSec");
 const timerBar = quizContainer.querySelector("header .timerBar");
+const timeroff = quizContainer.querySelector("header .timeText");
 
 const ans_list = document.querySelector(".answerList");
 
@@ -35,14 +36,37 @@ continueButton.onclick = () => {
 let questionCount = 0;
 let quesNumb = 1;
 let counter;
+let counterLine;
 let timeValue = 15;
 let widthValue = 0;
 let userScore = 0;
+
 const nextButton = quizContainer.querySelector(".nextBtn");
 const resultContainer = document.querySelector(".resultContainer");
 const restartQuiz = resultContainer.querySelector(".navButtons .continueButton");
 const quitQuiz = resultContainer.querySelector(".navButtons .quitQuiz");
 
+restartQuiz.onclick = () =>{
+    quizContainer.classList.remove("activeQuiz");
+    resultContainer.classList.remove("activeResult");
+    window.location.reload();
+    let questionCount = 0;
+    let quesNumb = 1;
+    let timeValue = 15;
+    let widthValue = 0;
+    let userScore = 0;
+    showQuestions(questionCount);
+    questionStatus(quesNumb);
+    clearInterval(counter);
+    startTimer(timeValue);
+    clearInterval(counterLine);
+    startTimerLine(widthValue);
+    nextButton.style.display = "none";
+    timeoff.textContent = "Time Left";
+}
+quitQuiz.onclick = () =>{
+    window.location.reload();
+}
 // Next button click
 
 nextButton.onclick = () =>{
@@ -56,7 +80,10 @@ nextButton.onclick = () =>{
         clearInterval(counterLine);
         startTimerLine(widthValue);
         nextButton.style.display = "none";
+        timeoff.textContent = "Time Left";
     } else{
+        clearInterval(counter);
+        clearInterval(counterLine);
         console.log("Test completed");
         showResultContainer();
     }
@@ -160,6 +187,20 @@ function startTimer(time){
         if(time < 0){
             clearInterval(counter);
             timeCounter.textContent = "00";
+            timeoff.textContent = "Time Out";
+
+            let correctAnswer = questions[questionCount].answer;
+            let allOptions = ans_list.children.length;
+            for(let i = 0; i < allOptions; i++){
+                if( ans_list.children[i].textContent == correctAnswer){
+                    ans_list.children[i].setAttribute("class", "option correct");
+                    ans_list.children[i].insertAdjacentHTML("beforeend", tickIcon);
+                }
+            }
+            for(let i = 0; i < allOptions; i++){
+                ans_list.children[i].classList.add("disabled");
+            }
+            nextButton.style.display = "block";
         }
     }
 }
