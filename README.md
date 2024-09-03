@@ -30,4 +30,8 @@ Are you ready to test your IT knowledge? [QuizzApp](http://duvorrichardwinner.me
 
 **Note:** To ensure the best experience, please use a modern web browser that supports HTML5, CSS3, and JavaScript.
 
+<<<<<<< HEAD
 **Enjoy [QuizzApp](http://duvorrichardwinner.me/QuizApp/)!**
+=======
+**Enjoy QuizzApp!**
+>>>>>>> f4e932d (Tue, Sep 3, 2024, 9:38 AM +00:00)
