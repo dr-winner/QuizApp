@@ -82,8 +82,6 @@ nextButton.onclick = () =>{
         nextButton.style.display = "none";
         timeoff.textContent = "Time Left";
     } else{
-        clearInterval(counter);
-        clearInterval(counterLine);
         console.log("Test completed");
         showResultContainer();
     }
