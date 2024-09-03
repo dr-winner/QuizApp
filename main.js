@@ -92,6 +92,7 @@ function optionSelected(answer){
     let allOptions = ans_list.children.length;
     userScore += 1;
     if(userAnswer == correctAnswer){
+        userScore += 1;
         answer.classList.add("correct");
         console.log("Answer is correct");
         answer.insertAdjacentHTML("beforeend", tickIcon);
