@@ -27,6 +27,8 @@ quitQuiz.onclick = () => {
 continueButton.onclick = () => {
     infoContainer.classList.remove("activeInfo"); //hide the info container
     quizContainer.classList.add("activeQuiz"); //show the quiz container
+    welcomeText.classList.remove("activeWelcome"); //hide the welcome text
+
     showQuestions(0);
     questionStatus(1);
     startTimer(15);
