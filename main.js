@@ -50,11 +50,13 @@ restartQuiz.onclick = () =>{
     quizContainer.classList.remove("activeQuiz");
     resultContainer.classList.remove("activeResult");
     window.location.reload();
+
     let questionCount = 0;
     let quesNumb = 1;
     let timeValue = 15;
     let widthValue = 0;
     let userScore = 0;
+    
     showQuestions(questionCount);
     questionStatus(quesNumb);
     clearInterval(counter);
