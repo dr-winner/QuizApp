@@ -8,7 +8,7 @@ const continueButton = infoContainer.querySelector(".navButtons .continueButton"
 const quizContainer = document.querySelector(".quizContainer");
 const timeCounter = quizContainer.querySelector(".timer .timerSec");
 const timerBar = quizContainer.querySelector("header .timerBar");
-const timeroff = quizContainer.querySelector("header .timeText");
+const timeoff = quizContainer.querySelector("header .timeText");
 
 const ans_list = document.querySelector(".answerList");
 
