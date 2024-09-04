@@ -436,7 +436,7 @@ footer .nextBtn:hover {
  */
 @media (max-width: 600px) {
     body {
-        background: red;
+        font-size: 80%;
     }
 
     .infoContainer,
