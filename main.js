@@ -149,7 +149,7 @@ function optionSelected(answer){
 
 function showResultContainer(){
     infoContainer.classList.remove("activeInfo"); //hide the info container
-    quizContainer.classList.remove("activeQiuz"); //hide the quiz container
+    quizContainer.classList.remove("activeQuiz"); //hide the quiz container
     resultContainer.classList.add("activeResult"); //show the result container
     const scoreText = resultContainer.querySelector(".scoreText");
     if(userScore > 45){
