@@ -428,3 +428,13 @@ footer .nextBtn:hover {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+ @media (max-width: 600px) {
+    
+ }
+
