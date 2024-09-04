@@ -30,6 +30,7 @@ body {
 }
 
 .welcomeText {
+    position: absolute;
     font-size: 30px;
     font-weight: 700;
     color: hsl(180, 94%, 50%);
