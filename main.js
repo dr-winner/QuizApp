@@ -36,7 +36,7 @@ continueButton.onclick = () => {
 let questionCount = 0;
 let quesNumb = 1;
 let counter;
-let counterLine;
+// let counterLine;
 let timeValue = 15;
 let widthValue = 0;
 let userScore = 0;
@@ -56,7 +56,7 @@ restartQuiz.onclick = () =>{
     let timeValue = 15;
     let widthValue = 0;
     let userScore = 0;
-    
+
     showQuestions(questionCount);
     questionStatus(quesNumb);
     clearInterval(counter);
