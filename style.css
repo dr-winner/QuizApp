@@ -436,13 +436,14 @@ footer .nextBtn:hover {
  */
 @media (max-width: 600px) {
     body {
-        font-size: 60%;
+
     }
 
     .infoContainer,
     .quizContainer,
     .resultContainer {
         width: 90%;
+        font-size: 60%;
         padding: 5px;
         margin: 4;
     }
