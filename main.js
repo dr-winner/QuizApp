@@ -144,7 +144,7 @@ function optionSelected(answer){
     nextButton.style.display = "block";
 }
 
-showResultContainer(){
+function showResultContainer(){
     infoContainer.classList.remove("activeInfo"); //hide the info container
     quizContainer.classList.remove("activeQiuz"); //hide the quiz container
     resultContainer.classList.add("activeResult"); //show the result container
