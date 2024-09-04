@@ -37,7 +37,7 @@ continueButton.onclick = () => {
 }
 
 let questionCount = 0;
-let quesNumb = 48;
+let quesNumb = 1;
 let counter;
 let counterLine;
 let timeValue = 15;
@@ -54,7 +54,7 @@ restartQuiz.onclick = () =>{
     resultContainer.classList.remove("activeResult");
 
     questionCount = 0;
-    quesNumb = 48;
+    quesNumb = 1;
     timeValue = 15;
     widthValue = 0;
     userScore = 0;
