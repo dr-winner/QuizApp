@@ -439,6 +439,7 @@ footer .nextBtn:hover {
         font-size: 25px;
         font-weight: 500;
         margin-top: 8%;
+        align-items: center;
     }
     .welcomeText span {
         font-weight: 700;
@@ -465,6 +466,7 @@ footer .nextBtn:hover {
         .welcomeText {
             font-size: 20px;
             font-weight: 400;
+            align-items: center;
         }
 
     }
