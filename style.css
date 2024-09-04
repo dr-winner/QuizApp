@@ -439,8 +439,8 @@ footer .nextBtn:hover {
     .infoContainer,
     .quizContainer,
     .resultContainer {
-        width: 90%;
-        font-size: 60%;
+        width: 40%;
+        font-size: 40%;
         padding: 5px;
         margin: 4;
     }
