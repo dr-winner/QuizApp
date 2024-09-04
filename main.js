@@ -152,23 +152,23 @@ showResultContainer(){
         scoreText.innerHTML = scoreTag;
     }
     else if(userScore < 40){
-        let scoreTag = '<span>Nice one, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>Nice one, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
     else if(userScore < 30){
-        let scoreTag = '<span>You tried your best, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>You tried your best, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
     else if(userScore < 20){
-        let scoreTag = '<span>You can do better! trust me. You got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>You can do better! trust me. You got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
     else if(userScore < 10){
-        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>and sorry, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
     else(userScore < 10){
-        let scoreTag = '<span>Try again, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>Try again, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
 };
