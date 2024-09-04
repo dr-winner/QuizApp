@@ -167,7 +167,7 @@ showResultContainer(){
         let scoreTag = '<span>and sorry, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else(userScore < 10){
+    else{
         let scoreTag = '<span>Try again, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
