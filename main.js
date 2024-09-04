@@ -36,7 +36,7 @@ continueButton.onclick = () => {
 let questionCount = 0;
 let quesNumb = 1;
 let counter;
-// let counterLine;
+let counterLine;
 let timeValue = 15;
 let widthValue = 0;
 let userScore = 0;
@@ -49,7 +49,7 @@ const lquitQuiz = resultContainer.querySelector(".navButtons .lquitQuiz");
 restartQuiz.onclick = () =>{
     quizContainer.classList.remove("activeQuiz");
     resultContainer.classList.remove("activeResult");
-    window.location.reload();
+    // window.location.reload();
 
     let questionCount = 0;
     let quesNumb = 1;
