@@ -72,6 +72,8 @@ restartQuiz.onclick = () =>{
 lquitQuiz.onclick = () =>{
     window.location.reload();
     userScore = 0;
+    showQuestions(0);
+    questionStatus(1);
 }
 // Next button click
 
