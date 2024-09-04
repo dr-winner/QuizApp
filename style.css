@@ -238,7 +238,7 @@ body {
     user-select: none;
 }
 
-.quizContainer header .timerBar{
+.quizContainer header .timerBar {
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -311,19 +311,19 @@ section .answerList .option:hover {
     background: hsl(354, 68%, 66%);
 }
 
-.answerList .option.correct{
+.answerList .option.correct {
     color: var(--primary-color);
     /* border-color: var(--primary-color); */
     background: hsl(134, 41%, 88%);
 }
 
-.answerList .option.incorrect{
+.answerList .option.incorrect {
     color: hsl(354, 88%, 26%);
     /* border-color: hsl(354, 88%, 26%); */
     background: hsl(354, 100%, 87%);
 }
 
-.answerList .option.disabled{
+.answerList .option.disabled {
     pointer-events: none;
 }
 
@@ -434,27 +434,32 @@ footer .nextBtn:hover {
  * On tablets and other medium-sized devices, we want to customize some
  * of the mobile styles.
  */
- @media (max-width: 600px) {
+@media (max-width: 600px) {
     body {
         background: red;
     }
- }
 
-
- @media (max-width: 550px) {
-    body {
-        background: blue;
+    .infoContainer,
+    .quizContainer,
+    .resultContainer {
+        
     }
- }
 
- @media (max-width: 450px) {
-    body {
-        background: green;
-    }
- }
 
- @media (max-width: 400px) {
-    body {
-        background: black;
+    @media (max-width: 550px) {
+        body {
+            background: blue;
+        }
     }
- }
+
+    @media (max-width: 450px) {
+        body {
+            background: green;
+        }
+    }
+
+    @media (max-width: 400px) {
+        body {
+            background: black;
+        }
+    }
