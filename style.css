@@ -436,7 +436,7 @@ footer .nextBtn:hover {
  */
 @media (max-width: 600px) {
     body {
-        font-size: 80%;
+        font-size: 60%;
     }
 
     .infoContainer,
@@ -444,7 +444,6 @@ footer .nextBtn:hover {
     .resultContainer {
         width: 90%;
         padding: 5px;
-        font-size: 80%;
         margin: 4;
     }
 
