@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizzapp | Quiz Application</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/21b2c7c7d4.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body>
-    <div class="welcomeText">Welcome to <span>QuizzApp</span>!
-        <p>Fun and engaging quiz designed to challenge<br>
-            your understanding of basic IT concepts</p>
-    </div>
-    <!-- Start Button -->
-    <div class="startButton">
-        <button>Start!</button>
-    </div>
+        <title>Quizzapp | Quiz Application</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/21b2c7c7d4.js" crossorigin="anonymous"></script>
 
-    <div class="infoContainer">
-        <div class="containerTitle">
-            <span>Please take note!</span>
+        <!-- Pure CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+            integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="welcomeText">Welcome to <span>QuizzApp</span>!
+            <p>Fun and engaging quiz designed to challenge<br>
+                your understanding of basic computing concepts</p>
         </div>
-        <div class="ruleList">
-            <ol>
-                <li class="rule">Each question carries <span>15 seconds</span>. Let your eyes be on the countdown </li>
-                <li class="rule">You are not allowed to reselect answers</li>
-                <li class="rule">Select an option before the time elapses</li>
-                <li class="rule">You cannot pause once you start the quiz</li>
-                <li class="rule">You can only see your scores after the quiz</li>
-            </ol>
+        <!-- Start Button -->
+        <div class="startButton">
+            <button>Start!</button>
         </div>
-        <div class="navButtons">
-            <button class="quitQuiz">Quit quiz</button>
-            <button class="continueButton">Continue</button>
+
+        <div class="infoContainer">
+            <div class="containerTitle">
+                <span>Please take note!</span>
+            </div>
+            <div class="ruleList">
+                <ol>
+                    <li class="rule">Each question carries <span>15 seconds</span>. Let your eyes be on the countdown
+                    </li>
+                    <li class="rule">You are not allowed to reselect answers</li>
+                    <li class="rule">Select an option before the time elapses</li>
+                    <li class="rule">You cannot pause once you start the quiz</li>
+                    <li class="rule">You can only see your scores after the quiz</li>
+                </ol>
+            </div>
+            <div class="navButtons">
+                <button class="quitQuiz">Quit quiz</button>
+                <button class="continueButton">Continue</button>
+            </div>
         </div>
-    </div>
 
-    <!-- Quiz Container -->
+        <!-- Quiz Container -->
 
-    <div class="quizContainer">
-        <header>
-            <div class="title">
-                Winner's Quiz Application
-            </div>
-            <div class="timer">
-                <div class="timeText">Time Left</div>
-                <div class="timerSec">15</div>
-            </div>
-            <div class="timerBar"></div>
-        </header>
-        <section>
-            <div class="questionText">
-                <!-- <span>What does CPU stand for?</span> -->
-            </div>
+        <div class="quizContainer">
+            <header>
+                <div class="title">
+                    Winner's Quiz Application
+                </div>
+                <div class="timer">
+                    <div class="timeText">Time Left</div>
+                    <div class="timerSec">15</div>
+                </div>
+                <div class="timerBar"></div>
+            </header>
+            <section>
+                <div class="questionText">
+                    <!-- <span>What does CPU stand for?</span> -->
+                </div>
 
-            <div class="answerList">
-                <!-- <div class="option">
+                <div class="answerList">
+                    <!-- <div class="option">
                     <span>Central Processing Unit</span>
                     <div class="icon tick"><i class="fas fa-check"></i></div>
                 </div>
@@ -74,38 +83,38 @@
                     <div class="icon tick"><i class="fas fa-check"></i></div>
                 </div> -->
 
-            </div>
-        </section>
+                </div>
+            </section>
 
-        <!-- Quiz ontainer footer -->
-        <footer>
-            <div class="questionStat">
-                <!-- <span>
+            <!-- Quiz ontainer footer -->
+            <footer>
+                <div class="questionStat">
+                    <!-- <span>
                     <p>2</p>of<p>50</p>Questions
                 </span> -->
+                </div>
+                <button class="nextBtn">Next Question</button>
+            </footer>
+        </div>
+
+        <!-- Result Container -->
+        <div class="resultContainer">
+            <div class="icon">
+                <i class="fas fa-crown"></i>
             </div>
-            <button class="nextBtn">Next Question</button>
-        </footer>
-    </div>
+            <div class="completeNotice">You have successfully completed this quiz</div>
+            <div class="scoreText">
+                <!-- <span>and sorry, you got <p>2</p> out of <p>50</p></span> -->
+            </div>
+            <div class="navButtons">
+                <button class="continueButton">Re-take Quiz</button>
+                <button class="quitQuiz lquitQuiz">Quit Quiz</button>
 
-    <!-- Result Container -->
-    <div class="resultContainer">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
+            </div>
         </div>
-        <div class="completeNotice">You have successfully completed this quiz</div>
-        <div class="scoreText">
-            <!-- <span>and sorry, you got <p>2</p> out of <p>50</p></span> -->
-        </div>
-        <div class="navButtons">
-            <button class="continueButton">Re-take Quiz</button>
-            <button class="quitQuiz">Quit Quiz</button>
 
-        </div>
-    </div>
-
-</body>
-<script src="main.js"></script>
-<script src="questions.js"></script>
+    </body>
+    <script src="main.js"></script>
+    <script src="questions.js"></script>
 
 </html>

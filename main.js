@@ -8,7 +8,7 @@ const continueButton = infoContainer.querySelector(".navButtons .continueButton"
 const quizContainer = document.querySelector(".quizContainer");
 const timeCounter = quizContainer.querySelector(".timer .timerSec");
 const timerBar = quizContainer.querySelector("header .timerBar");
-const timeroff = quizContainer.querySelector("header .timeText");
+const timeoff = quizContainer.querySelector("header .timeText");
 
 const ans_list = document.querySelector(".answerList");
 
@@ -16,6 +16,7 @@ const ans_list = document.querySelector(".answerList");
 startButton.onclick = () => {
     infoContainer.classList.add("activeInfo"); //show the info container
     welcomeText.classList.remove("activeWelcome"); //hide the welcome text
+    userScore = 0;
 }
 
 // If the quit quiz button is clicked
@@ -27,6 +28,8 @@ quitQuiz.onclick = () => {
 continueButton.onclick = () => {
     infoContainer.classList.remove("activeInfo"); //hide the info container
     quizContainer.classList.add("activeQuiz"); //show the quiz container
+    welcomeText.classList.remove("activeWelcome"); //hide the welcome text
+
     showQuestions(0);
     questionStatus(1);
     startTimer(15);
@@ -44,17 +47,18 @@ let userScore = 0;
 const nextButton = quizContainer.querySelector(".nextBtn");
 const resultContainer = document.querySelector(".resultContainer");
 const restartQuiz = resultContainer.querySelector(".navButtons .continueButton");
-const quitQuiz = resultContainer.querySelector(".navButtons .quitQuiz");
+const lquitQuiz = resultContainer.querySelector(".navButtons .lquitQuiz");
 
 restartQuiz.onclick = () =>{
-    quizContainer.classList.remove("activeQuiz");
+    quizContainer.classList.add("activeQuiz");
     resultContainer.classList.remove("activeResult");
-    window.location.reload();
-    let questionCount = 0;
-    let quesNumb = 1;
-    let timeValue = 15;
-    let widthValue = 0;
-    let userScore = 0;
+
+    questionCount = 0;
+    quesNumb = 1;
+    timeValue = 15;
+    widthValue = 0;
+    userScore = 0;
+
     showQuestions(questionCount);
     questionStatus(quesNumb);
     clearInterval(counter);
@@ -63,9 +67,13 @@ restartQuiz.onclick = () =>{
     startTimerLine(widthValue);
     nextButton.style.display = "none";
     timeoff.textContent = "Time Left";
+    userScore = 0;
 }
-quitQuiz.onclick = () =>{
+lquitQuiz.onclick = () =>{
     window.location.reload();
+    userScore = 0;
+    showQuestions(0);
+    questionStatus(1);
 }
 // Next button click
 
@@ -82,6 +90,8 @@ nextButton.onclick = () =>{
         nextButton.style.display = "none";
         timeoff.textContent = "Time Left";
     } else{
+        clearInterval(counter);
+        clearInterval(counterLine);
         console.log("Test completed");
         showResultContainer();
     }
@@ -142,33 +152,33 @@ function optionSelected(answer){
     nextButton.style.display = "block";
 }
 
-showResultContainer(){
+function showResultContainer(){
     infoContainer.classList.remove("activeInfo"); //hide the info container
-    quizContainer.classList.remove("activeQiuz"); //hide the quiz container
+    quizContainer.classList.remove("activeQuiz"); //hide the quiz container
     resultContainer.classList.add("activeResult"); //show the result container
     const scoreText = resultContainer.querySelector(".scoreText");
-    if(userScore <= 50){
-        let scoreTag = '<span>You\'re such a genius!, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+    if(userScore > 45){
+        let scoreTag = '<span>You are such a genius!, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else if(userScore < 40){
-        let scoreTag = '<span>Nice one, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+    else if(userScore > 40){
+        let scoreTag = '<span>Nice one, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else if(userScore < 30){
-        let scoreTag = '<span>You tried your best, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+    else if(userScore > 30){
+        let scoreTag = '<span>You tried your best, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else if(userScore < 20){
-        let scoreTag = '<span>You can do better! trust me. You got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+    else if(userScore > 20){
+        let scoreTag = '<span>You can do better! trust me. You got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else if(userScore < 10){
-        let scoreTag = '<span>and sorry, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+    else if(userScore > 10){
+        let scoreTag = '<span>and sorry, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else(userScore < 10){
-        let scoreTag = '<span>Try again, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
+    else{
+        let scoreTag = '<span>Try again, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
 };

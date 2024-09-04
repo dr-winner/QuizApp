@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 
 /*  Unviversal styles*/
@@ -37,6 +37,7 @@ body {
     margin-top: 10%;
     user-select: none;
     align-items: center;
+    pointer-events: none;
 }
 
 .welcomeText span {
@@ -60,8 +61,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 4px 8px 0 rgba(7, 197, 169, 0.2),
-                0px 6px 20px 0 rgba(8, 150, 131, 0.19);
+    /* box-shadow: 0px 4px 8px 0 rgba(7, 197, 169, 0.2),
+                0px 6px 20px 0 rgba(8, 150, 131, 0.19); */
     transition: all 0.3s ease;
 }
 
@@ -237,7 +238,7 @@ body {
     user-select: none;
 }
 
-.quizContainer header .timerBar{
+.quizContainer header .timerBar {
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -310,19 +311,19 @@ section .answerList .option:hover {
     background: hsl(354, 68%, 66%);
 }
 
-.answerList .option.correct{
+.answerList .option.correct {
     color: var(--primary-color);
     /* border-color: var(--primary-color); */
     background: hsl(134, 41%, 88%);
 }
 
-.answerList .option.incorrect{
+.answerList .option.incorrect {
     color: hsl(354, 88%, 26%);
     /* border-color: hsl(354, 88%, 26%); */
     background: hsl(354, 100%, 87%);
 }
 
-.answerList .option.disabled{
+.answerList .option.disabled {
     pointer-events: none;
 }
 
@@ -427,3 +428,56 @@ footer .nextBtn:hover {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (max-width: 1000px) {
+    .welcomeText {
+        font-size: 25px;
+        font-weight: 500;
+        margin-top: 8%;
+        align-items: center;
+    }
+    .welcomeText span {
+        font-weight: 700;
+    }
+
+    .welcomeText p {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 1%;
+    }
+
+    .startButton button {
+        font-size: 35px;
+        font-weight: 700;
+        padding: 15px 35px;
+        border-radius: 40px;
+    }
+
+
+
+
+
+}
+
+@media (max-width: 600px) {
+
+}
+
+    @media (max-width: 550px) {
+        .welcomeText {
+            font-size: 20px;
+            font-weight: 400;
+            align-items: center;
+        }
+
+        .startButton button {
+            font-size: 30px;
+            font-weight: 500;
+            padding: 10px 30px;
+        }
+    }
