@@ -36,7 +36,7 @@ continueButton.onclick = () => {
 }
 
 let questionCount = 0;
-let quesNumb = 1;
+let quesNumb = 48;
 let counter;
 let counterLine;
 let timeValue = 15;
