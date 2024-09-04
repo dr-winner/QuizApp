@@ -441,8 +441,8 @@ footer .nextBtn:hover {
     .resultContainer {
         width: 47%;
         font-size: 45%;
-        padding: 4px;
-        margin: 4;
+        /* padding: 4px; */
+        /* margin: 4; */
     }
 }
 
@@ -453,8 +453,8 @@ footer .nextBtn:hover {
     .resultContainer {
         width: 45%;
         font-size: 45%;
-        padding: 4px;
-        margin: 4px;
+        /* padding: 4px; */
+        /* margin: 4px; */
     }
 }
 
@@ -466,18 +466,5 @@ footer .nextBtn:hover {
             font-size: 350%;
             padding: 2px;
             margin: 2px;
-        }
-
-    }
-
-    @media (max-width: 450px) {
-        body {
-            background: green;
-        }
-    }
-
-    @media (max-width: 400px) {
-        body {
-            background: black;
         }
     }
