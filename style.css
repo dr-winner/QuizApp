@@ -439,7 +439,7 @@ footer .nextBtn:hover {
     .infoContainer,
     .quizContainer,
     .resultContainer {
-        width: 45%;
+        width: 47%;
         font-size: 45%;
         padding: 4px;
         margin: 4;
@@ -451,10 +451,10 @@ footer .nextBtn:hover {
     .infoContainer,
     .quizContainer,
     .resultContainer {
-        width: 90%;
-        font-size: 60%;
-        padding: 5px;
-        margin: 4;
+        width: 45%;
+        font-size: 45%;
+        padding: 4px;
+        margin: 4px;
     }
 }
 
@@ -462,10 +462,10 @@ footer .nextBtn:hover {
         .infoContainer,
         .quizContainer,
         .resultContainer {
-            width: 90%;
-            font-size: 60%;
-            padding: 5px;
-            margin: 4;
+            width: 35%;
+            font-size: 350%;
+            padding: 2px;
+            margin: 2px;
         }
 
     }
