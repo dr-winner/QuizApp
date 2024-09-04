@@ -44,7 +44,7 @@ let userScore = 0;
 const nextButton = quizContainer.querySelector(".nextBtn");
 const resultContainer = document.querySelector(".resultContainer");
 const restartQuiz = resultContainer.querySelector(".navButtons .continueButton");
-const quitQuiz = resultContainer.querySelector(".navButtons .quitQuiz");
+const lquitQuiz = resultContainer.querySelector(".navButtons .lquitQuiz");
 
 restartQuiz.onclick = () =>{
     quizContainer.classList.remove("activeQuiz");
@@ -64,7 +64,7 @@ restartQuiz.onclick = () =>{
     nextButton.style.display = "none";
     timeoff.textContent = "Time Left";
 }
-quitQuiz.onclick = () =>{
+lquitQuiz.onclick = () =>{
     window.location.reload();
 }
 // Next button click
