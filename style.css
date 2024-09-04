@@ -434,7 +434,7 @@ footer .nextBtn:hover {
  * On tablets and other medium-sized devices, we want to customize some
  * of the mobile styles.
  */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .infoContainer,
     .quizContainer,
