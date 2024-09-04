@@ -435,6 +435,8 @@ footer .nextBtn:hover {
  * of the mobile styles.
  */
  @media (max-width: 600px) {
-    
+    body {
+        background: red;
+    }
  }
 
