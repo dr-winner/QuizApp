@@ -16,6 +16,7 @@ const ans_list = document.querySelector(".answerList");
 startButton.onclick = () => {
     infoContainer.classList.add("activeInfo"); //show the info container
     welcomeText.classList.remove("activeWelcome"); //hide the welcome text
+    userScore = 0;
 }
 
 // If the quit quiz button is clicked
@@ -52,11 +53,11 @@ restartQuiz.onclick = () =>{
     quizContainer.classList.add("activeQuiz");
     resultContainer.classList.remove("activeResult");
 
-    let questionCount = 0;
-    let quesNumb = 1;
-    let timeValue = 15;
-    let widthValue = 0;
-    let userScore = 0;
+    questionCount = 0;
+    quesNumb = 48;
+    timeValue = 15;
+    widthValue = 0;
+    userScore = 0;
 
     showQuestions(questionCount);
     questionStatus(quesNumb);
