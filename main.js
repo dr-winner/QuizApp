@@ -47,7 +47,7 @@ const restartQuiz = resultContainer.querySelector(".navButtons .continueButton")
 const lquitQuiz = resultContainer.querySelector(".navButtons .lquitQuiz");
 
 restartQuiz.onclick = () =>{
-    quizContainer.classList.remove("activeQuiz");
+    quizContainer.classList.add("activeQuiz");
     resultContainer.classList.remove("activeResult");
     // window.location.reload();
 
