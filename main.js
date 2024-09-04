@@ -151,19 +151,19 @@ showResultContainer(){
         let scoreTag = '<span>You\'re such a genius!, you got <p>' + scoreText + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else if(userScore < 40){
+    else if(userScore > 40){
         let scoreTag = '<span>Nice one, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else if(userScore < 30){
+    else if(userScore > 30){
         let scoreTag = '<span>You tried your best, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else if(userScore < 20){
+    else if(userScore > 20){
         let scoreTag = '<span>You can do better! trust me. You got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else if(userScore < 10){
+    else if(userScore > 10){
         let scoreTag = '<span>and sorry, you got <p>' + userScore + '</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
