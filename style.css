@@ -441,6 +441,7 @@ footer .nextBtn:hover {
         margin-top: 8%;
         align-items: center;
     }
+
     .welcomeText span {
         font-weight: 700;
     }
@@ -458,26 +459,54 @@ footer .nextBtn:hover {
         border-radius: 40px;
     }
 
+    .quizContainer header .timerBar {
+        max-width: 100%;
+    }
 
 
-
+    .infoContainer,
+    .quizContainer,
+    .resultContainer {
+       width: 100%;
+       margin-left: 5px;
+       margin-right: 5px;
+    }
 
 }
 
 @media (max-width: 600px) {
 
+    .infoContainer,
+    .quizContainer,
+    .resultContainer {
+       width: 100%;
+       margin-left: 5px;
+       margin-right: 5px;
+    }
 }
 
-    @media (max-width: 550px) {
-        .welcomeText {
-            font-size: 20px;
-            font-weight: 400;
-            align-items: center;
-        }
-
-        .startButton button {
-            font-size: 30px;
-            font-weight: 500;
-            padding: 10px 30px;
-        }
+@media (max-width: 550px) {
+    .welcomeText {
+        font-size: 20px;
+        font-weight: 400;
+        align-items: center;
     }
+
+
+    .infoContainer,
+    .quizContainer,
+    .resultContainer {
+       width: 100%;
+       margin-left: 5px;
+       margin-right: 5px;
+    }
+
+    .startButton button {
+        font-size: 30px;
+        font-weight: 500;
+        padding: 10px 30px;
+    }
+    .quizContainer header .timerBar {
+        max-width: 100%;
+    }
+}
